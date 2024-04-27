@@ -172,7 +172,7 @@ jQuery(document).on("click", ".btn-send", function (event) {
     message: message,
   };
 
-  emailjs.send("polo", "template_4fclio6", templateParams).then(
+  emailjs.send("service_37iax5t", "template_2rvkpmd", templateParams).then(
     function (response) {
       alert("Send mail success!");
     },
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           breakpoint: 1024,
           settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
             centerPadding: "40px",
             slidesToShow: 3,
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           breakpoint: 767,
           settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
             centerPadding: "80px",
             slidesToShow: 1,
@@ -252,8 +252,8 @@ document.addEventListener("DOMContentLoaded", function () {
       autoplay: false,
       autoplaySpeed: 2000,
       speed: 500,
-      dots: false,
-      arrows: false,
+      dots: true,
+      arrows: true,
     });
   };
   document.head.appendChild(slickScript);

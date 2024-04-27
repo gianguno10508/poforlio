@@ -58,15 +58,23 @@ body section.wrap-slider {
 .my-slider .slick-prev:before {
   font-size: 42px;
 }
-.my-slider .slick-dots {
+.my-slider .slick-dots{
   bottom: -40px;
 }
-.my-slider .slick-dots li button:before {
+.my-slider .slick-dots li button:before,
+.timeline-my-slider .slick-dots li button:before{
   color: #fff;
   font-size: 10px;
   transition: 0.2s;
 }
-.my-slider .slick-dots li.slick-active button:before {
+.timeline-my-slider .slick-dots{
+  bottom: 10px;
+}
+.timeline-wrap-slider .slick-dotted.slick-slider{
+  margin-bottom: 0 !important;
+}
+.my-slider .slick-dots li.slick-active button:before,
+.timeline-my-slider .slick-dots li.slick-active button:before{
   color: #fff;
   opacity: 1;
   font-size: 12px;
