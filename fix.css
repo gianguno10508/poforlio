@@ -58,26 +58,38 @@ body section.wrap-slider {
 .my-slider .slick-prev:before {
   font-size: 42px;
 }
-.my-slider .slick-dots{
+.my-slider .slick-dots {
   bottom: -40px;
 }
 .my-slider .slick-dots li button:before,
-.timeline-my-slider .slick-dots li button:before{
-  color: #fff;
-  font-size: 10px;
-  transition: 0.2s;
+.timeline-my-slider .slick-dots li button:before,
+.swiper-pagination-bullet {
+  color: #fff !important;
+  font-size: 10px !important;
+  transition: 0.2s !important;
 }
-.timeline-my-slider .slick-dots{
+.swiper-pagination-bullet{
+  background-color: #fff !important;
+  opacity: 0.4 !important;
+}
+.timeline-my-slider .slick-dots {
   bottom: 10px;
 }
-.timeline-wrap-slider .slick-dotted.slick-slider{
+.timeline-wrap-slider .slick-dotted.slick-slider {
   margin-bottom: 0 !important;
 }
 .my-slider .slick-dots li.slick-active button:before,
-.timeline-my-slider .slick-dots li.slick-active button:before{
+.timeline-my-slider .slick-dots li.slick-active button:before {
   color: #fff;
   opacity: 1;
   font-size: 12px;
+  transition: 0.2s;
+}
+.swiper-pagination-bullet-active{
+  background-color: #fff !important;
+  opacity: 1 !important; 
+  width: 10px !important;
+  height: 10px !important;
   transition: 0.2s;
 }
 
@@ -162,5 +174,68 @@ footer#footer {
   nav.navbar a {
     width: fit-content;
     margin-bottom: 20px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.swiper-slide {
+  position: relative;
+  text-align: center;
+}
+
+.swiper-slide .swiper-slide-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 10px;
+  font-size: 28px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 42px !important;
+  line-height: 1 !important;
+  opacity: 0.75 !important;
+  color: #fff !important;
+  -webkit-font-smoothing: antialiased;
+  font-family: slick !important;
+}
+.swiper-button-next:after {
+  content: "→" !important;
+}
+.swiper-button-prev:after {
+  content: "←" !important;
+}
+.swiper-button-next:focus:after,
+.swiper-button-next:hover:after,
+.swiper-button-prev:focus:after,
+.swiper-button-prev:hover:after {
+  opacity: 1 !important;
+}
+.certificate .heading{
+  margin-bottom: 30px;
+}
+@media(max-width: 768px){
+  .swiper-slide{
+    width: 100%;
+    height: 100%;
   }
 }

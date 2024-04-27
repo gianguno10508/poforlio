@@ -244,16 +244,45 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       ],
     });
-    $(".timeline-my-slider").slick({
-      centerMode: false,
-      centerPadding: "80px",
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: false,
-      autoplaySpeed: 2000,
-      speed: 500,
-      dots: true,
-      arrows: true,
+    // $(".timeline-my-slider").slick({
+    //   centerMode: false,
+    //   centerPadding: "80px",
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   autoplay: false,
+    //   autoplaySpeed: 2000,
+    //   speed: 500,
+    //   dots: true,
+    //   arrows: true,
+    // });
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      spaceBetween: 1,
+      slidesPerView: 1,
+      centeredSlides: true,
+      loop: true,
+      initialSlide: 2,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+      },
     });
   };
   document.head.appendChild(slickScript);
