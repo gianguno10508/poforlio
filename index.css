@@ -589,6 +589,18 @@ img.displaySlide {
   box-shadow: 1px 8px 10px 2px var(--main-color);
   overflow: hidden;
 }
+.project-box:first-child{
+  background-image: url("./images/img7.png");
+}
+.project-box:last-child{
+  background-image: url("./images/img3.png");
+}
+.project-box:first-child::after{
+  background-image: url("./images/img1.png");
+}
+.project-box:last-child:after{
+  background-image: url("./images/img5.png");
+}
 .project-box > i {
   font-size: 50px;
   color: #f24484;
